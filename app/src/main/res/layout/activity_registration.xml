@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.torepofficiel.carem.koris.RegistrationActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/appbar_padding_top"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite"
+            android:theme="@style/toolbar_title_color"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextColor="@color/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/registration_fragment_margin"
+        android:id="@+id/registration_fragment_container"/>
+
+    <RelativeLayout
+        android:id="@+id/registering_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_centerHorizontal="true"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:theme="@style/AppTheme.ColorWhite"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomFont"
+            android:layout_below="@id/progress"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/login_button_text_size"
+            android:gravity="center"
+            android:text="Veuillez patienter svp !"/>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:id="@+id/fab_layout">
+
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_valide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/fab_valide"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/valide"
+            android:visibility="invisible"/>
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_disable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            app:srcCompat="@drawable/disable"
+            android:theme="@style/fab_disable"
+            android:clickable="false"/>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</android.support.design.widget.CoordinatorLayout>

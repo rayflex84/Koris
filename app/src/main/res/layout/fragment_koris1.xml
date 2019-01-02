@@ -1,0 +1,227 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_logo_holo">
+
+    <RelativeLayout
+        android:id="@+id/solde_online_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_centerHorizontal="true"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:theme="@style/AppTheme.ColorWhite"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomFont"
+            android:layout_below="@id/progress"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/login_button_text_size"
+            android:gravity="center"
+            android:text="Veuillez patienter svp !"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/connexion_impossible_block"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/impossible_connexion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:layout_marginBottom="50dp"
+            style="@style/CustomFont"
+            android:text="Impossible de se connecter"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/but_impossible_connexion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/impossible_connexion"
+            style="@style/CustomFont"
+            android:text="Raffraichir"
+            android:background="@color/colorTransparency"
+            android:textColor="@color/colorPrimary"
+            android:textSize="30sp"/>
+
+    </RelativeLayout>
+
+<TableLayout
+    android:id="@+id/fragment1_online_block"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:weightSum="100"
+    android:visibility="visible">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="65">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:baselineAligned="false">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/fab_margin"
+                android:layout_weight="50">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/but_cpt_ligne_1"
+                    style="@style/CustomFont"
+                    android:textColor="@color/color_yellow_light_holo"
+                    android:text="Créditer le compte en ligne"
+                    android:layout_marginBottom="10dp"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomFont"
+                    android:id="@+id/txt_ajout"
+                    android:gravity="center"
+                    android:layout_below="@id/but_cpt_ligne_1"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="Transférer de l\'argent :"
+                    android:textAppearance="?android:textAppearanceSmall"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomFont"
+                    android:id="@+id/but_cpt_local_1"
+                    android:layout_below="@id/txt_ajout"
+                    android:text="Vers le compte local"
+                    android:textColor="@color/color_yellow_light_holo"
+                    android:layout_marginBottom="10dp"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+
+                <Button
+                    android:id="@+id/but_cpt_epargne_ligne"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CustomFont"
+                    android:layout_below="@id/but_cpt_local_1"
+                    android:textColor="@color/color_yellow_light_holo"
+                    android:text="Vers le compte épargne en ligne"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="50"
+                android:id="@+id/linear_content_1">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/colorWhite"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/fab_margin"
+                    style="@style/CustomFont"
+                    android:text="Solde"/>
+
+                <TextView
+                    android:id="@+id/section_label_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_centerInParent="true"
+                    android:textSize="30sp"
+                    style="@style/CustomFont"
+                    android:textColor="@color/colorWhite" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:textAppearanceLarge"
+                    android:textColor="@color/colorWhite"
+                    android:layout_below="@id/section_label_1"
+                    style="@style/CustomFont"
+                    android:gravity="center"
+                    android:text="Fcfa"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+        <TableLayout
+            android:id="@+id/epargne_content"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height= "0dp"
+            android:layout_weight="35"
+            android:layout_margin="@dimen/fab_margin"
+            android:stretchColumns="1">
+
+            <View android:layout_height="2dip"
+                android:background="@color/colorPrimaryDark"
+                android:layout_marginBottom="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/color_darker_gray"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/fab_margin"
+                style="@style/CustomFont"
+                android:text="Compte Epargne"/>
+
+        <TableRow
+            android:layout_marginTop="@dimen/fab_margin">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/color_darker_gray"
+                style="@style/CustomFont"
+                android:text="Solde :"/>
+
+            <TextView
+                android:id="@+id/section_label1_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="30sp"
+                style="@style/CustomFont"
+                android:textColor="@color/color_darker_gray" />
+        </TableRow>
+
+        </TableLayout>
+
+</TableLayout>
+    </RelativeLayout>

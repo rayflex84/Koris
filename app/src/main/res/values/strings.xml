@@ -1,0 +1,156 @@
+<resources>
+    <string name="app_name">Koris</string>
+    <string name="title_activity_registration">Inscription</string>
+    <string name="title_activity_bienvenue">Bienvenue</string>
+    <string name="action_settings">Paramètres</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="action_sign_in">Connexion</string>
+    <string name="error_invalid_email">Cette adresse Email est invalide</string>
+    <string name="error_invalid_koris_id">Ce numéro est invalide (Format correct: 90000000)</string>
+    <string name="error_invalid_password">Le mot de passe est trop court (Minimum %1$d caractères).</string>
+    <string name="error_incorrect_password">Le mot de passe doit contenir au minimum une majuscule et un chiffre.</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="registration_button_text">Recupérer ou créer un nouveau compte local</string>
+    <string name="mdp_oublie">Oublié ?</string>
+    <string name="nom">Nom</string>
+    <string name="prenoms">Prénoms</string>
+    <string name="date_naissance">Date de Naissance</string>
+    <string name="koris_id">Purse ID (Numéro GSM)</string>
+    <string name="confirm_mdp">Confirmer le Mot de Passe</string>
+    <string name="ville">Ville</string>
+    <string name="gsm">GSM</string>
+    <string name="legal">Je certifie avoir l\'âge légal, avoir lu et accepté les Conditions d\'utilisation
+        de Koris. Je peux modifier mes données personnelles et paramètres à tout moment depuis mon compte Koris.
+    </string>
+
+    <string name="sign_in">Accepter et ouvrir le compte</string>
+
+    <string name="spinner_label1">Choisissez un type de compte utilisateur</string>
+    <string name="spinner_label2">Vous avez choisi un %1$s.</string>
+    <string name="fill_all_empty">*Veuillez remplir tous les champs svp !</string>
+    <string name="fill_all_error">Veuillez verifier vos données svp!</string>
+
+    <string-array name="list_account_type">
+        <item>___Votre choix___</item>
+        <item>Compte personnel</item>
+        <item>Compte commercial</item>
+        <item>Compte marchand</item>
+    </string-array>
+
+    <string name="titre_dialog_cnx_checking">Vous n\'êtes pas connecté à Internet !</string>
+    <string name="msg_dialog_cnx_checking">Vous devez être connecté à internet pour %1$s.\n</string>
+    <string name="ok_dialog_cnx_checking">D\'accord</string>
+    <string name="deja_compte">"J'ai déjà un compte"</string>
+    <string name="first_registration">Première inscription</string>
+    <string name="prob_connexion">Un problème de connexion empêche de poursuivre l\'opération.\nVeuillez réessayer svp.</string>
+
+    <string name="permDenied">Voici les autorisations manquantes: \n%1$s</string>
+
+    <string name="info2Denied">Pour attribuer les permissions nécessaires à Koris,\n_ Cliquez sur le bouton en bas \"Demander les autorisations\"\n
+        _ Et si cela ne fonctionne pas, aller dans Paramètres => Applications. Cherchez dans la liste, \"Koris\" et cliquez dessus, cliquez ensuite
+        sur Autorisations pour activer les autorisations manquantes.</string>
+
+    <string name="infoDenied">Oops! Nous ne pouvons poursuivre,\n l\'application a besoin de certaines autorisations pour fonctionner. Veuillez svp
+        donner à Koris ces permissions ci-dessous pour continuer.</string>
+
+    <string name="permRequest">Demander les autorisations</string>
+    <string name="phone_not_unique">Ce numéro est dejà enregistré.\n-Veuillez insérer la carte sim de ce numéro dans le slot N. 1 (Pour les téléphones Dual-sim)\n-Si vous voulez procéder à un changement de numéro, veuillez contacter notre service clientèle.</string>
+    <string name="exit_toast_msg">Veuillez appuyer de nouveau pour quitter</string>
+    <string name="id_card_not_unique">Ce numero de pièce d\'identité est déjà associé à ce numéro : %1$s.\nSi c\'est votre numéro, veuillez insérer la carte sim de ce numéro dans le slot N. 1 (Pour les téléphones Dual-sim)\n-Si vous voulez procéder à un changement de numéro, veuillez contacter notre service clientèle.</string>
+    <string name="no_file">Oops! Nous n\'avons détecté aucun compte existant sur votre appareil.\n\n
+    Pour créer ou recupérer un compte existant associé à votre carte sim (Pour les appareils Dual-sim, c\'est la carte sim insérée à l\'emplacement num. 1), veuillez %1$s connecter à internet et appuyer sur le bouton en dessous.\n\nMerci pour votre confiance.</string>
+
+    <string name="conflitNumero">Assurez vous d\'avoir placé la carte sim portant ce numéro à l\'emplacement Num. 1.</string>
+
+    <string name="titre_auto_time">Date Heure automatique et/ou Fuseau horaire automatique désactivé(s)</string>
+    <string name="msg_auto_time">Pour des raisons de sécurité, veuillez activer les paramètres suivant :\n\n- Date Heure automatique (Choisissez l\'option Heure du réseau)\n\n- Fuseau horaire automatique.\n</string>
+
+    <string name="date_naissance_erronnee">Date de naissance erronnée</string>
+    <string name="msg_date_naissance_erronnee">\nVeuillez choisir votre date de naissance svp.</string>
+
+    <string name="noConnexion">Pas de connexion internet.</string>
+
+    <string name="app_freezed">L\'application est bloquée.\n\nVeuillez svp contacter le service clientèle pour plus d\'informations.\nMerci.</string>
+
+    <string name="sim_state">Désolé! L\'application est momentanément suspendue.\n\nAucune carte sim détectée ou aucun signal du réseau cellulaire.\n(Carte Sim 1 pour les appareils dual-sim)</string>
+    <string name="sim_changement">Désolé! L\'application est momentanément suspendue.\n\nUn changement de carte sim a été détectée.\nLa carte sim insérée (Carte Sim 1 pour les appareils dual-sim)
+        ne correspond pas à la carte sim associée au compte existant sur cet appareil.\nVeuillez svp remettre la bonne carte sim ou contacter le service clientèle pour un eventuel changement de compte.\nMerci pour votre compréhension.</string>
+
+    <string name="empty_validation_message">Le champ %1$s est obligatoire</string>
+    <string name="miniLength_validation_message">Le champ %1$s doit faire au moins %2$d caractères.</string>
+    <string name="toggle_mdp_afficher">Afficher</string>
+    <string name="toggle_mdp_cacher">Cacher</string>
+    <string name="id_card">Numéro de Pièce didentité</string>
+    <string name="raffraichir">Raffraîchir</string>
+
+    <string name="idCard_dialog_title">Numéro d\'une pièce d\'identité</string>
+    <string name="idCard_dialog_msg">Attention! Veuillez entrer exactement le numéro figurant sur votre pièce d\'identité\n\n
+                Pour toutes opérations à notre direction, nous vérifierons votre identité.\n</string>
+    <string name="bienvenue_button_text">Poursuivre</string>
+
+    <string name="bienvenue">Bonjour</string>
+
+    <string name="connexion_suspendue">La connexion a été interrompue.</string>
+
+    <string name="title_register_success">Félicitations !</string>
+    <string name="msg_register_success">Vous vous êtes enregistré avec succès.\n</string>
+
+    <string name="title_compte_charge">Félicitations !</string>
+    <string name="msg_compte_charge">Votre compte a été chargé sur l\'appareil avec succès.\n</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="nav_korisid_text">Purse Id : %1$s</string>
+
+    <string name="compte_local">COMPTE LOCAL</string>
+    <string name="compte_ligne">COMPTE EN LIGNE</string>
+    <string name="abonnement">ABONNEMENT</string>
+
+    <string-array name="abonnements">
+        <item>Une journée(24h)</item>
+        <item>Un mois</item>
+        <item>6 mois</item>
+    </string-array>
+
+    <!--string resources for barcode implementation-->
+    <string name="ok">OK</string>
+    <string name="permission_camera_rationale">Access to the camera is needed for detection</string>
+    <string name="no_camera_permission">This application cannot run because it does not have the camera permission.  The application will now exit.</string>
+    <string name="low_storage_error">Face detector dependencies cannot be downloaded due to low device storage</string>
+    <string name="title_activity_barcode_main">Nouvelle Transaction</string>
+    <string name="barcode_header">Click &quot;Read Barcode&quot; to read a barcode</string>
+    <string name="read_barcode">Read Barcode</string>
+    <string name="auto_focus">Auto Focus</string>
+    <string name="use_flash">Use Flash</string>
+    <string name="barcode_success">Barcode read successfully</string>
+    <string name="barcode_failure">No barcode captured</string>
+    <string name="barcode_error">"Error reading barcode: %1$s"</string>
+    <string name="annee_naisance">L\'année de votre naissance</string>
+    <string name="titre_annee_naisance">Entrer l\'année de votre naissance</string>
+    <string name="mdp_incorrecte">Mot de passe incorrecte</string>
+    <string name="titre_connexion_interrompue">Connexion interrompue</string>
+    <string name="msg_connexion_impossible">Impossible de se connecter, veuillez reessayer svp !</string>
+    <string name="salutation_utilisateur">%1$s %2$s</string>
+    <string name="prix_200">Prix : 200 Fcfa</string>
+    <string name="prix_3000">Prix : 3000 Fcfa</string>
+    <string name="prix_17000">Prix : 17 000 Fcfa</string>
+    <string name="solde_insuffisant_operation_canceled">Opération annulée</string>
+    <string name="msg_solde_insuffisant_operation_canceled">Le solde de votre compte %1$s est insuffisant pour poursuivre l\'opération</string>
+    <string name="confirmation">Confirmation</string>
+    <string name="msg_confirmation">Voulez-vous poursuivre l\'opération?</string>
+    <string name="confirmer_dialog_cnx_checking">Confirmer</string>
+    <string name="annuler_dialog_cnx_checking">Annuler</string>
+    <string name="operation_reussie">Opération réussie</string>
+    <string name="msg_abonnement_reussi">Vous êtes abonné pour une période %1$s</string>
+    <string name="string_solde_compte_epargne">%1$s Fcfa</string>
+
+
+</resources>

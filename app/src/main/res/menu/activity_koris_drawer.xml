@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Compte Local">
+            <menu>
+                <item
+                    android:id="@+id/nav_recevoir"
+                    android:icon="@drawable/ic_arrow_recevoir_black"
+                    android:title="Recevoir un paiement" />
+                <item
+                    android:id="@+id/nav_envoyer"
+                    android:icon="@drawable/ic_arrow_send_black"
+                    android:title="Procéder à un paiement" />
+
+                <item
+                    android:id="@+id/nav_historique_local"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Historique des transactions" />
+            </menu>
+        </item>
+
+     <item android:title="Compte En Ligne">
+            <menu>
+                <item
+                    android:id="@+id/nav_transfert"
+                    android:icon="@drawable/ic_arrow_send_online_black"
+                    android:title="Envoyer de l\'argent" />
+
+                <item
+                    android:id="@+id/nav_historique_ligne"
+                    android:icon="@drawable/ic_menu_slideshow"
+                    android:title="Historique des transactions" />
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/nav_abonnement"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Abonnement"/>
+    </group>
+
+    <item android:title="Mon Compte">
+        <menu>
+            <item
+                android:id="@+id/nav_modifier_account"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Modifier mes informations personnelles" />
+            <item
+                android:id="@+id/nav_modifier_mdp"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Changer mon mot de passe" />
+            <item
+                android:id="@+id/nav_sauvegarder_donnees"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Sauvegarder mes données" />
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_logo_holo"
+    tools:context="com.torepofficiel.carem.koris.BienvenueActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@mipmap/logo_small"
+        android:scaleType="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="logo" />
+
+    <TextView
+        android:id="@+id/bienvenue_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/CustomFont"
+        android:text="BIENVENUE SUR E-PURSE"
+        android:textSize="@dimen/login_button_text_size"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/colorPrimaryDark"/>
+
+    <RelativeLayout
+        android:id="@+id/register_progress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_centerHorizontal="true"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:theme="@style/AppTheme.ColorWhite"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/CustomFont"
+            android:layout_below="@id/progress"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/login_button_text_size"
+            android:gravity="center"
+            android:text="Veuillez patienter svp !"/>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/register_button"
+        style="@style/CustomFont"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:text="@string/registration_button_text"
+        android:textColor="@color/colorWhite"
+        android:background="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textSize="@dimen/login_button_text_size"/>
+
+
+</RelativeLayout>

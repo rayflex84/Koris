@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_logo_holo"
+    tools:context="com.torepofficiel.carem.koris.PermissionsDeniedActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@mipmap/logo_small"
+        android:scaleType="center"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="logo" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/logo">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <TextView
+                android:id="@+id/infoDenied"
+                style="@style/CustomFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:text="@string/infoDenied"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/login_button_text_size" />
+
+            <TextView
+                android:id="@+id/info2Denied"
+                style="@style/CustomFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/infoDenied"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:text="@string/info2Denied"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/login_button_text_size" />
+
+            <TextView
+                android:id="@+id/permDenied"
+                style="@style/CustomFont"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info2Denied"
+                android:layout_marginTop="@dimen/fab_margin"
+                android:layout_marginBottom="70dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/login_button_text_size" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/permDeniedButton"
+        style="@style/CustomFont"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:onClick="requestPermissions"
+        android:text="@string/permRequest"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/login_button_text_size"
+        android:textStyle="bold" />
+
+</RelativeLayout>
