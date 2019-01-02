@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">12dp</dimen>
+    <dimen name="activity_vertical_margin">12dp</dimen>
+    <dimen name="login_button_text_size">13sp</dimen>
+    <dimen name="registration_fragment_margin">48dp</dimen>
+    <dimen name="appbar_padding_top">6dp</dimen>
+    <dimen name="fill_all_size">13sp</dimen>
+    <dimen name="refres_connexion">14sp</dimen>
+</resources>

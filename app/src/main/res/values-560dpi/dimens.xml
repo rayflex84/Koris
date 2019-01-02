@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="activity_horizontal_margin">44dp</dimen>
+    <dimen name="fill_all_size">15sp</dimen>
+    <dimen name="activity_vertical_margin">44dp</dimen>
+    <dimen name="login_button_text_size">17sp</dimen>
+    <dimen name="fab_margin">18dp</dimen>
+    <dimen name="registration_fragment_margin">54dp</dimen>
+    <dimen name="appbar_padding_top">14dp</dimen>
+    <dimen name="refres_connexion">18sp</dimen>
+    <dimen name="verif_progress">3dp</dimen>
+</resources>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:id="@+id/naissance_edittext"
+            android:inputType="number"
+            style="@style/CustomFont"
+            android:hint="@string/annee_naisance"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_margin="16dp"
+            android:background="@drawable/custom_edittext_background">
+            <requestFocus/>
+        </android.support.v7.widget.AppCompatEditText>
+
+    </LinearLayout>

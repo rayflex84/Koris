@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/myscrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_logo_holo"
+    tools:context="com.torepofficiel.carem.koris.RegistrationActivity">
+
+    <RelativeLayout
+        android:id="@+id/inner_Relative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="25dp">
+
+        <RelativeLayout
+            android:id="@+id/noConnexion_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/noConnexion"
+                style="@style/CustomFont"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/noConnexion"
+                android:textColor="@color/color_red_holo"
+                android:textSize="@dimen/refres_connexion" />
+
+            <TextView
+                android:id="@+id/refresh_connexion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:text="@string/raffraichir"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="@dimen/refres_connexion"
+                android:visibility="visible" />
+
+            <ProgressBar
+                android:id="@+id/refresh_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="30dp"
+                android:layout_marginRight="30dp"
+                android:theme="@style/AppTheme.ColorWhite"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/spinner_label"
+            style="@style/CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/noConnexion_layout"
+            android:layout_marginBottom="15dp"
+            android:textSize="@dimen/login_button_text_size" />
+
+        <Spinner
+            android:id="@+id/account_type"
+            style="@style/CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner_label"
+            android:layout_marginBottom="30dp"
+            android:gravity="center_horizontal" />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/content_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/account_type"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/name_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextTheme">
+
+                <EditText
+                    android:id="@+id/nom"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/nom"
+                    android:inputType="textCapCharacters|textNoSuggestions"
+                    android:maxLines="1"
+                    android:textSize="@dimen/login_button_text_size"
+                    android:theme="@style/EditTextTheme">
+
+                    <requestFocus />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/nom_error"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/color_red_holo"
+                    android:textSize="@dimen/fill_all_size"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/name_img_valide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="20dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/nom"
+                app:layout_anchorGravity="end|center_vertical"
+                app:srcCompat="@drawable/valide_blue"
+                android:contentDescription="name_img_valide" />
+
+            <ImageView
+                android:id="@+id/name_img_disable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="20dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/nom"
+                app:layout_anchorGravity="end|center_vertical"
+                app:srcCompat="@drawable/disable_red"
+                android:contentDescription="name_img_valide" />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/content_firstname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_name"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/firstname_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextTheme">
+
+                <EditText
+                    android:id="@+id/prenom"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prenoms"
+                    android:inputType="textCapWords|textNoSuggestions"
+                    android:maxLines="1"
+                    android:textSize="@dimen/login_button_text_size"
+                    android:theme="@style/EditTextTheme" />
+
+                <TextView
+                    android:id="@+id/prenom_error"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/color_red_holo"
+                    android:textSize="@dimen/fill_all_size"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/firstname_img_valide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="20dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/prenom"
+                app:layout_anchorGravity="end|center_vertical"
+                app:srcCompat="@drawable/valide_blue"
+                android:contentDescription="firstname_img_valide" />
+
+            <ImageView
+                android:id="@+id/firstname_img_disable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="20dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/prenom"
+                app:layout_anchorGravity="end|center_vertical"
+                app:srcCompat="@drawable/disable_red"
+                android:contentDescription="firstname_img_disable" />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/content_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_firstname"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/email_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextTheme">
+
+                <EditText
+                    android:id="@+id/email"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_email"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:textSize="@dimen/login_button_text_size"
+                    android:theme="@style/EditTextTheme" />
+
+                <TextView
+                    android:id="@+id/email_error"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/color_red_holo"
+                    android:textSize="@dimen/fill_all_size"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/email_img_valide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="20dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/email"
+                app:layout_anchorGravity="end|center_vertical"
+                app:srcCompat="@drawable/valide_blue"
+                android:contentDescription="email_img_valide" />
+
+            <ImageView
+                android:id="@+id/email_img_disable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="20dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/email"
+                app:layout_anchorGravity="end|center_vertical"
+                app:srcCompat="@drawable/disable_red"
+                android:contentDescription="email_img_disable" />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/content_korisId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_email"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/korisId_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:theme="@style/EditTextTheme">
+
+                <EditText
+                    android:id="@+id/korisId"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/koris_id"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:textSize="@dimen/login_button_text_size"
+                    android:theme="@style/EditTextTheme" />
+
+                <TextView
+                    android:id="@+id/korisId_error"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/color_red_holo"
+                    android:textSize="@dimen/fill_all_size"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <ProgressBar
+                android:id="@+id/korisId_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/verif_progress"
+                android:theme="@style/AppTheme.ColorWhite"
+                android:visibility="invisible"
+                app:layout_anchor="@id/korisId"
+                app:layout_anchorGravity="end" />
+
+            <ImageView
+                android:id="@+id/korisId_img_valide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="20dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/korisId"
+                app:layout_anchorGravity="end|center_vertical"
+                app:srcCompat="@drawable/valide_blue"
+                android:contentDescription="korisId_img_valide" />
+
+            <ImageView
+                android:id="@+id/korisId_img_disable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="20dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/korisId"
+                app:layout_anchorGravity="end|center_vertical"
+                app:srcCompat="@drawable/disable_red"
+                android:contentDescription="korisId_img_disable" />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/content_main_mdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_korisId"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/mdp_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextTheme"
+                app:hintEnabled="false"
+                app:passwordToggleDrawable="@null"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/mdp"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/prompt_password"
+                    android:imeActionId="@+id/login"
+                    android:imeActionLabel="@string/action_sign_in"
+                    android:imeOptions="actionUnspecified"
+                    android:inputType="textPassword"
+                    android:maxLength="30"
+                    android:maxLines="1"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/login_button_text_size"
+                    android:theme="@style/EditTextTheme" />
+
+                <TextView
+                    android:id="@+id/mdp_error"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/color_red_holo"
+                    android:textSize="@dimen/fill_all_size"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                app:layout_anchor="@id/mdp"
+                app:layout_anchorGravity="end|center_vertical">
+
+                <ImageView
+                    android:id="@+id/mdp_img_valide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/toggle_button_mdp_registration"
+                    android:layout_toRightOf="@+id/toggle_button_mdp_registration"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/valide_blue"
+                    android:contentDescription="mdp_img_valide" />
+
+                <ImageView
+                    android:id="@+id/mdp_img_disable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@+id/toggle_button_mdp_registration"
+                    android:layout_toRightOf="@+id/toggle_button_mdp_registration"
+                    android:visibility="invisible"
+                    app:srcCompat="@drawable/disable_red"
+                    android:contentDescription="mdp_img_disable" />
+
+                <TextView
+                    android:id="@+id/toggle_button_mdp_registration"
+                    style="@style/CustomFont"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:text="@string/toggle_mdp_afficher"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/login_button_text_size" />
+
+            </RelativeLayout>
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <TextView
+            android:id="@+id/mdp_label"
+            style="@style/CustomFont"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/content_main_mdp"
+            android:layout_centerVertical="true"
+            android:layout_gravity="top"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:text="@string/prompt_password"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/content_id_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_main_mdp"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/id_card_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextTheme">
+
+                <EditText
+                    android:id="@+id/id_card"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/id_card"
+                    android:inputType="text|textNoSuggestions"
+                    android:maxLines="1"
+                    android:textSize="@dimen/login_button_text_size"
+                    android:theme="@style/EditTextTheme" />
+
+                <TextView
+                    android:id="@+id/id_card_error"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/color_red_holo"
+                    android:textSize="@dimen/fill_all_size"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <ProgressBar
+                android:id="@+id/id_card_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/verif_progress"
+                android:theme="@style/AppTheme.ColorWhite"
+                android:visibility="invisible"
+                app:layout_anchor="@id/id_card"
+                app:layout_anchorGravity="end" />
+
+            <ImageView
+                android:id="@+id/id_card_img_valide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="20dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/id_card"
+                app:layout_anchorGravity="end|center_vertical"
+                app:srcCompat="@drawable/valide_blue"
+                android:contentDescription="id_card_img_valide" />
+
+            <ImageView
+                android:id="@+id/id_card_img_disable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="20dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/id_card"
+                app:layout_anchorGravity="end|center_vertical"
+                app:srcCompat="@drawable/disable_red"
+                android:contentDescription="id_card_img_disable" />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/content_date_naissance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_id_card"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/date_naissance_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextTheme">
+
+                <EditText
+                    android:id="@+id/date_naissance"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:hint="@string/date_naissance"
+                    android:inputType="date"
+                    android:maxLines="1"
+                    android:textSize="@dimen/login_button_text_size"
+                    android:theme="@style/EditTextTheme" />
+
+                <TextView
+                    android:id="@+id/date_naissance_error"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/color_red_holo"
+                    android:textSize="@dimen/fill_all_size"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/date_naissance_img_valide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="20dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/date_naissance"
+                app:layout_anchorGravity="end|center_vertical"
+                app:srcCompat="@drawable/valide_blue"
+                android:contentDescription="date_naissance_img_valide" />
+
+            <ImageView
+                android:id="@+id/date_naissance_img_disable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="20dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/date_naissance"
+                app:layout_anchorGravity="end|center_vertical"
+                app:srcCompat="@drawable/disable_red"
+                android:contentDescription="date_naissance_img_disable" />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <android.support.design.widget.CoordinatorLayout
+            android:id="@+id/content_ville"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_date_naissance"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/ville_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:theme="@style/EditTextTheme">
+
+                <EditText
+                    android:id="@+id/ville"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/ville"
+                    android:inputType="textCapWords|textNoSuggestions"
+                    android:maxLines="1"
+                    android:textSize="@dimen/login_button_text_size"
+                    android:theme="@style/EditTextTheme" />
+
+                <TextView
+                    android:id="@+id/ville_error"
+                    style="@style/CustomFont"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:textColor="@color/color_red_holo"
+                    android:textSize="@dimen/fill_all_size"
+                    android:visibility="gone" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/ville_img_valide"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="20dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/ville"
+                app:layout_anchorGravity="end|center_vertical"
+                app:srcCompat="@drawable/valide_blue"
+                android:contentDescription="ville_img_valide" />
+
+            <ImageView
+                android:id="@+id/ville_img_disable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="12dp"
+                android:layout_marginRight="12dp"
+                android:paddingBottom="20dp"
+                android:visibility="invisible"
+                app:layout_anchor="@id/ville"
+                app:layout_anchorGravity="end|center_vertical"
+                app:srcCompat="@drawable/disable_red"
+                android:contentDescription="ville_img_disable" />
+
+        </android.support.design.widget.CoordinatorLayout>
+
+        <android.support.v7.widget.AppCompatCheckBox
+            android:id="@+id/legal_text"
+            style="@style/CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_ville"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="30dp"
+            android:gravity="top"
+            android:text="@string/legal"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/fill_all_size"
+            app:buttonTint="@color/colorPrimaryDark" />
+
+        <TextView
+            android:id="@+id/fill_all"
+            style="@style/CustomFont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/legal_text"
+            android:layout_marginBottom="100dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/fill_all_empty"
+            android:textColor="@color/color_red_holo"
+            android:textSize="@dimen/fill_all_size"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+</ScrollView>
+
